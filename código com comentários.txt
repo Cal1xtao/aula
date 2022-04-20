@@ -1,0 +1,44 @@
+//Dizendo ao compilador que deve incluir o arquivo que nele existem declarações de funções úteis
+#include <stdio.h>
+//Garantindo que o "ç" e acentuação sejam exibidos normalmente no programa
+#include <locale.h>
+
+//Ponto de partida para a execução do programa
+int main () {
+//Setando a localização como Portuguese
+setlocale(LC_ALL, "Portuguese");
+//Setando variáveis float
+float num1,num2,num3,somaParcial;
+
+//Apresentando na tela a frase " Informar o primeiro número: "
+printf("Informar o primeiro número: ");
+//Recebendo o dado digitado na linha acima
+scanf("%f", &num1);
+
+//Apresentando na tela a frase " Informar o segundo número: "
+printf("Informar o segundo número: ");
+//Recebendo o dado digitado na linha acima
+scanf("%f", &num2);
+
+//Apresentando na tela a frase " Informar o terceiro número: "
+printf("Informar o terceiro número: ");
+//Recebendo o dado digitado na linha acima
+scanf("%f", &num3);
+
+//Indicando que o valor da somaParcial é 0.0
+somaParcial = 0.0;
+
+//Somando o valor do num1 com o valor da somaParcial
+printf("SomaParcial = %.2f\n", somaParcial);
+//Setando o valor da somaParcial somada com o valor do num1
+somaParcial = somaParcial + num1;
+//Somando o valor do num2 com o valor da somaParcial
+printf("somaParcial+%.2f = %.2f\n", num2, somaParcial);
+//Setando o valor da somaParcial já somada com os valores do num1 e num2
+somaParcial += num3;
+//Mostrando valor total da somaParcial
+printf("SomaParcial + %.2f = %.2f\n", num3, somaParcial);
+
+//Indicando que o programa terminou normalmente, se fosse outro número diferente de zero significa que terminou anormal.
+return 0;
+}
